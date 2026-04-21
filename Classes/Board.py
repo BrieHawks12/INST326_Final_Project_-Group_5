@@ -38,7 +38,6 @@ class Board:
             BoardSpace(25, "B. & O. Railroad", "railroad", 200),
             BoardSpace(26, "Atlantic Avenue", "property", 260),
             BoardSpace(27, "Ventnor Avenue", "property", 260),
-
             BoardSpace(28, "Water Works", "utility", 150),
 
             BoardSpace(29, "Marvin Gardens", "property", 280),
