@@ -1,0 +1,102 @@
+#from filename import classname     
+from BoardSpace import BoardSpace
+       
+class Board:
+    def __init__(self):
+        self.spaces = self.create_board()
+     
+    #Creates Monopoly Board in order    
+    def create_board(self):
+        return[
+            BoardSpace( 0, "Go", "go", 0),
+            BoardSpace(1, "Mediterranean Avenue", "property", 60),
+            BoardSpace(2, "Community Chest", "community_chest", 0),
+            BoardSpace(3,  "Baltic Avenue", "property", 60),
+            BoardSpace(4, "Income Tax",  "tax", 0),
+            BoardSpace(5, "Reading Railroad",  "railroad", 200),
+            BoardSpace(6, "Oriental Avenue", "property", 100),
+            BoardSpace(7, "Chance",  "chance",0),
+            BoardSpace(8, "Vermont Avenue","property",100),
+            BoardSpace(9, "Connecticut Avenue",  "property",  120),
+            
+            BoardSpace(10, "Jail\Just Visiting", "jail", 0),
+            BoardSpace(11,  "St. Charles Place", "property", 140),
+            BoardSpace(12, "Electric Company", "utility", 140),
+            BoardSpace(13,  "States Avenue",  "property",  140),
+            BoardSpace(14,  "Virginia Avenue",  "property",  160),
+            BoardSpace(15,  "Pennsylvania Railroad", "railroad",200),
+            BoardSpace(16, "St. James Place", "property", 180),
+            BoardSpace(17, "Community Chest", "community_chest", 0),
+            BoardSpace(18, "Tennessee Avenue", "property", 180),
+            BoardSpace(19, "New York Avenue", "property", 200),
+            
+            BoardSpace(20, "Free Parking", "free_parking", 0),
+            BoardSpace(21, "Kentucky Avenue", "property", 220),
+            BoardSpace(22, "Chance", "chance", 0),
+            BoardSpace(23, "Indiana Avenue", "property", 220),
+            BoardSpace(24, "Illinois Avenue", "property", 240),
+            BoardSpace(25, "B. & O. Railroad", "railroad", 200),
+            BoardSpace(26, "Atlantic Avenue", "property", 260),
+            BoardSpace(27, "Ventnor Avenue", "property", 260),
+
+            BoardSpace(28, "Water Works", "utility", 150),
+
+            BoardSpace(29, "Marvin Gardens", "property", 280),
+
+            BoardSpace(30, "Go To Jail", "go_to_jail", 0),
+
+            BoardSpace(31, "Pacific Avenue", "property", 300),
+
+            BoardSpace(32, "North Carolina Avenue", "property", 300),
+
+            BoardSpace(33, "Community Chest", "community_chest", 0),
+
+            BoardSpace(34, "Pennsylvania Avenue", "property", 320),
+
+            BoardSpace(35, "Short Line", "railroad", 200),
+
+            BoardSpace(36, "Chance", "chance", 0),
+
+            BoardSpace(37, "Park Place", "property", 350),
+
+            BoardSpace(38, "Luxury Tax", "tax", 0),
+
+            BoardSpace(39, "Boardwalk", "property", 400)
+                       
+        ]                  
+                        
+           
+          
+           
+        
+    def get_space(self, position):
+        """
+        Returns the postion of the player at the given moment in the gameplay
+        
+        Args:
+        self:
+        postion:
+        
+        Returns
+        """
+        
+        return self.spaces[position]
+    
+    
+    def move_postion(self, current_postion, steps):
+        new_postion = (current_postion + steps) % len(self.spaces)
+        return new_postion
+    
+    
+b1 = Board()
+space = b1.get_space(35)
+print(space)
+
+new_postion = b1.move_postion(38,5)
+print(new_postion)
+
+
+
+        
+    
+    
