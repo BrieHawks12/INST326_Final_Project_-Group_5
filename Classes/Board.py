@@ -9,7 +9,7 @@ class Board:
     def create_board(self):
         return[
             BoardSpace( 0, "Go", "go", 0),
-            BoardSpace(1, "Mediterranean Avenue", "property", 60),
+            BoardSpace(1, "STAMP", "property", 60),
             BoardSpace(2, "Community Chest", "community_chest", 0),
             BoardSpace(3,  "Baltic Avenue", "property", 60),
             BoardSpace(4, "Income Tax",  "tax", 0),
