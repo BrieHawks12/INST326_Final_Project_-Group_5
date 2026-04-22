@@ -7,17 +7,25 @@ class Board:
      
     #Creates Monopoly Board in order    
     def create_board(self):
+        """
+        Creates the Monopoly board as list
+        Returns:
+            list: UMD buildings as property with prices
+        
+        Authors: All team members collaborated
+        """
+        
         return[
             BoardSpace( 0, "Go", "go", 0),
-            BoardSpace(1, "STAMP", "property", 60),
+            BoardSpace(1, "Adele H. Stamp Student Union", "property", 60),
             BoardSpace(2, "Community Chest", "community_chest", 0),
-            BoardSpace(3,  "Baltic Avenue", "property", 60),
+            BoardSpace(3,  "H.J. Patterson Hall", "property", 60),
             BoardSpace(4, "Income Tax",  "tax", 0),
-            BoardSpace(5, "Reading Railroad",  "railroad", 200),
-            BoardSpace(6, "Oriental Avenue", "property", 100),
+            BoardSpace(5, "Reading Railroad",  "railroad", 200),#purple line??
+            BoardSpace(6, "McKeldin Library", "property", 100),
             BoardSpace(7, "Chance",  "chance",0),
-            BoardSpace(8, "Vermont Avenue","property",100),
-            BoardSpace(9, "Connecticut Avenue",  "property",  120),
+            BoardSpace(8, "Edward St. John Learning & Teaching Center","property",100),
+            BoardSpace(9, "Microbiology Building ",  "property",  120),
             
             BoardSpace(10, "Jail\Just Visiting", "jail", 0),
             BoardSpace(11,  "St. Charles Place", "property", 140),
@@ -82,7 +90,17 @@ class Board:
         return self.spaces[position]
     
     
-    def move_postion(self, current_postion, steps):
+    def move_postion(self, current_postion:int, steps:int)-> int:
+        """
+        Calculates board position after moving steps
+        Args: 
+            current_postion:player's current positon
+            steps: numper of spaces forward
+            
+        Returns:
+            int: new position space
+        Author: Melanie Abzun
+        """
         new_postion = (current_postion + steps) % len(self.spaces)
         return new_postion
     
