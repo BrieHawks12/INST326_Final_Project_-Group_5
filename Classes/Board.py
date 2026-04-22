@@ -3,12 +3,27 @@ from BoardSpace import BoardSpace
        
 class Board:
     def __init__(self):
+        """
+        Creates the Monopoly board as list
+        
+        Arg:
+        self: instance of the class
+        
+        Returns:
+            
+        
+        Authors: Briana Bristow
+        """
         self.spaces = self.create_board()
      
     #Creates Monopoly Board in order    
     def create_board(self):
         """
         Creates the Monopoly board as list
+        
+        Arg:
+        self: instance of the class
+        
         Returns:
             list: UMD buildings as property with prices
         
@@ -39,35 +54,25 @@ class Board:
             BoardSpace(19, "New York Avenue", "property", 200),
             
             BoardSpace(20, "Free Parking", "free_parking", 0),
-            BoardSpace(21, "Kentucky Avenue", "property", 220),
+            BoardSpace(21, "Plants and Science", "property", 220),
             BoardSpace(22, "Chance", "chance", 0),
-            BoardSpace(23, "Indiana Avenue", "property", 220),
-            BoardSpace(24, "Illinois Avenue", "property", 240),
+            BoardSpace(23, "Cole Activities Building", "property", 220),
+            BoardSpace(24, "Jule Hall", "property", 240),
             BoardSpace(25, "B. & O. Railroad", "railroad", 200),
-            BoardSpace(26, "Atlantic Avenue", "property", 260),
-            BoardSpace(27, "Ventnor Avenue", "property", 260),
+            BoardSpace(26, "Martin Hall", "property", 260),
+            BoardSpace(27, "Symons Hall", "property", 260),
             BoardSpace(28, "Water Works", "utility", 150),
 
             BoardSpace(29, "Marvin Gardens", "property", 280),
-
             BoardSpace(30, "Go To Jail", "go_to_jail", 0),
-
             BoardSpace(31, "Pacific Avenue", "property", 300),
-
             BoardSpace(32, "North Carolina Avenue", "property", 300),
-
             BoardSpace(33, "Community Chest", "community_chest", 0),
-
             BoardSpace(34, "Pennsylvania Avenue", "property", 320),
-
             BoardSpace(35, "Short Line", "railroad", 200),
-
             BoardSpace(36, "Chance", "chance", 0),
-
             BoardSpace(37, "Park Place", "property", 350),
-
             BoardSpace(38, "Luxury Tax", "tax", 0),
-
             BoardSpace(39, "Boardwalk", "property", 400)
                        
         ]                  
@@ -81,10 +86,13 @@ class Board:
         Returns the postion of the player at the given moment in the gameplay
         
         Args:
-        self:
-        postion:
+        self:instance of a class
+        postion:postion on a board
         
-        Returns
+        Returns:
+        list: postion on the board
+        
+        Author: Briana Bristow
         """
         
         return self.spaces[position]
@@ -104,7 +112,7 @@ class Board:
         new_postion = (current_postion + steps) % len(self.spaces)
         return new_postion
     
-    
+#Below are used for testing purposes    
 b1 = Board()
 space = b1.get_space(35)
 print(space)
