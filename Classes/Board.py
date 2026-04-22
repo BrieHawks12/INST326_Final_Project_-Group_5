@@ -28,7 +28,7 @@ class Board:
             BoardSpace(9, "Microbiology Building ",  "property",  120),
             
             BoardSpace(10, "Jail\Just Visiting", "jail", 0),
-            BoardSpace(11,  "St. Charles Place", "property", 140),
+            BoardSpace(11,  "Hornbake Library", "property", 140),
             BoardSpace(12, "Electric Company", "utility", 140),
             BoardSpace(13,  "States Avenue",  "property",  140),
             BoardSpace(14,  "Virginia Avenue",  "property",  160),
