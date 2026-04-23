@@ -63,17 +63,17 @@ class Board:
             BoardSpace(27, "Symons Hall", "property", 260),
             BoardSpace(28, "Water Works", "utility", 150),
 
-            BoardSpace(29, "Marvin Gardens", "property", 280),
+            BoardSpace(29, "Xfinity Center", "property", 280),
             BoardSpace(30, "Go To Jail", "go_to_jail", 0),
-            BoardSpace(31, "Pacific Avenue", "property", 300),
-            BoardSpace(32, "North Carolina Avenue", "property", 300),
+            BoardSpace(31, "Tawes Hall", "property", 300),
+            BoardSpace(32, "Shoemaker Bldg", "property", 300),
             BoardSpace(33, "Community Chest", "community_chest", 0),
-            BoardSpace(34, "Pennsylvania Avenue", "property", 320),
-            BoardSpace(35, "Short Line", "railroad", 200),
+            BoardSpace(34, "Tydings Hall", "property", 320),
+            BoardSpace(35, "Shuttle-UM", "railroad", 200),
             BoardSpace(36, "Chance", "chance", 0),
-            BoardSpace(37, "Park Place", "property", 350),
-            BoardSpace(38, "Luxury Tax", "tax", 0),
-            BoardSpace(39, "Boardwalk", "property", 400)
+            BoardSpace(37, "Park Lot 1", "property", 350),
+            BoardSpace(38, "Parking Citaion", "tax", 0),
+            BoardSpace(39, "Reckord Armory", "property", 400)
                        
         ]                  
                         
