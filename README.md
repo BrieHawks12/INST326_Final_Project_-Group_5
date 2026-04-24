@@ -13,6 +13,8 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
     - Player.py: This class is responsible for controlling the behavior of the player which contains buying property, paying rent, gaining money, moving around the board using the Board Class.
 
+    - Dice.py: This class is simulates rolling a six sided dice and sums value. The sum will determine how many board spaces the player will move.
+
 # References
 
 - Monopoly Rules. (n.d.). Retrieved April 24, 2026, from https://fgbradleys.com/wp-content/uploads/rules/Monopoly_Rules.pdf?srsltid=AfmBOornP4uL21QccxjGKR_EF3P0_j0b1fNeqWtZ6v9Dc94DSQcObE-0
