@@ -27,11 +27,11 @@ class Board:
         Returns:
             list: UMD buildings as property with prices
         
-        Authors: All team members collaborated
+        Authors: Bristow, Zhang, Abzun
         """
         
         return[
-            BoardSpace( 0, "Go", "go", 0),
+            BoardSpace( 0, "Go", "go", 200),
             BoardSpace(1, "Adele H. Stamp Student Union", "property", 60),
             BoardSpace(2, "Community Chest", "community_chest", 0),
             BoardSpace(3,  "H.J. Patterson Hall", "property", 60),
@@ -42,7 +42,7 @@ class Board:
             BoardSpace(8, "Edward St. John Learning & Teaching Center","property",100),
             BoardSpace(9, "Microbiology Building ",  "property",  120),
             
-            BoardSpace(10, "Jail\Just Visiting", "jail", 0),
+            BoardSpace(10, "Jail / Just Visiting", "jail", 50),
             BoardSpace(11,  "Hornbake Library", "property", 140),
             BoardSpace(12, "Electric Company", "utility", 140),
             BoardSpace(13,  "Stem Library",  "property",  140),
@@ -92,7 +92,7 @@ class Board:
         Returns:
         list: postion on the board
         
-        Author: Briana Bristow
+        Author: Bristow
         """
         
         return self.spaces[position]

@@ -12,9 +12,8 @@ class BoardSpace(ABC):
         category: category of board space
         price: price of board space
         
-        Returns:
+        Returns: Nothing
             
-        
         Authors: Briana Bristow
         """
         #encapsolation technique being used by position and name
@@ -25,16 +24,50 @@ class BoardSpace(ABC):
         
     @property    
     def position(self):
+        """
+        getter that allows the use of the postion attribute
+        
+        Args:
+        self: instance of the class
+        
+        
+        Returns:
+        string: postion on the board
+        
+        Author: Bristow
+       
+        """
         return self._position
         
     @property
     def name(self):
+        """
+        getter that allows the use of the name attribute
+        
+        Args:
+        self: instance of the class
+     
+        Returns:
+        string: name of the player
+        
+        Author: Bristow
+       
+        """
         return self._name
     
     @abstractmethod
-    def land_on(self, player, game):
+    def land_on(self, player):
         """
         Outlines what space a player lands on and the actions that happen based on the space
+        
+        Args:
+        self: instance of the class
+     
+        Returns:
+        string: name of the player
+        
+        Author: Bristow
+           
         """
         
         pass
