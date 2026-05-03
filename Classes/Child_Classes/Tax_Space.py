@@ -1,7 +1,7 @@
 from Classes import BoardSpace,Player
 
 class Tax_Space(BoardSpace):
-    def __int__(self, position, name, tax_amount):
+    def __init__(self, position, name, tax_amount):
         """
         Creating class Tax_Space and inherated postion and name from BoardSpace
         
