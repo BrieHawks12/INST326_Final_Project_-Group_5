@@ -15,6 +15,26 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
     - Dice.py: This class is simulates rolling a six sided dice and sums value. The sum will determine how many board spaces the player will move.
 
+    - OwnableSpace.py: This class determines the behavior that will happen when a player lands on a space. It determines if the space is available for purchase and the rent price.
+
+2) Child Classes Directory
+    - Chance_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Chance Space. 
+
+    - Community_Chest_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Community Chest Space. 
+
+    - Free_Parking_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Free Parking Space. 
+
+    - Go_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Go space.
+
+    - Go_To_Jail.py: This child class uses polymorphism to determine what will happen when a user lands on the Go to Jail Space.
+
+    - Just_Visiting_Space: This child class uses polymorphism to determine what will happen when a user lands on the Just Visiting space.
+
+    - Property_Space.py: This child class outline the details of each space on the board. This class allows for upgrades to a specific space on the board. It uses encapsulation to protect the rent price.   
+
+    - Tax_Space.py: This child class outlines what happens when a player lands on a tax space. It uses encapsulation to protect the tax amount. 
+
+
 # References
 
 - Monopoly Rules. (n.d.). Retrieved April 24, 2026, from https://fgbradleys.com/wp-content/uploads/rules/Monopoly_Rules.pdf?srsltid=AfmBOornP4uL21QccxjGKR_EF3P0_j0b1fNeqWtZ6v9Dc94DSQcObE-0
