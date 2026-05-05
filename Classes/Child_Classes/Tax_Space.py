@@ -1,4 +1,4 @@
-from Classes import BoardSpace,Player
+from Classes.BoardSpace import BoardSpace
 
 class Tax_Space(BoardSpace):
     def __init__(self, position, name, tax_amount):
@@ -17,7 +17,7 @@ class Tax_Space(BoardSpace):
         Author: Bristow
        
         """
-        super().__init__(position,name)
+        super().__init__(position, name, "tax", 0)
         self._tax_amount = tax_amount
         
     @property

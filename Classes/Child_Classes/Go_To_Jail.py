@@ -1,8 +1,12 @@
-from Classes import BoardSpace
+from Classes.BoardSpace import BoardSpace
 
 #using inheratince technique with BoardSpace
 class Go_To_Jail_Space(BoardSpace):
     #method overriding-polymorphism
+    def __init__(self, position, name):
+    
+        super().__init__(position, name, "go_to_jail", 0)
+    
     def land_on(self, player):
         """
         Uses polymorphism to establish that a player has landed on go to jail

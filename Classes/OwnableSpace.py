@@ -1,6 +1,6 @@
-from abc import abstractmethod 
-from BoardSpace import BoardSpace 
-from Player import Player
+from abc import ABC,abstractmethod 
+from Classes.BoardSpace import BoardSpace 
+#from Player import Player
 
 
 class OwnableSpace(BoardSpace, ABC):
@@ -57,6 +57,10 @@ class OwnableSpace(BoardSpace, ABC):
         
         """
         return self._owner
+    
+    @owner.setter
+    def owner(self, player):
+        self._owner = player
 
     def is_owned(self):
         """

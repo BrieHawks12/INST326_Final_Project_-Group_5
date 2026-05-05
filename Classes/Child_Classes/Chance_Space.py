@@ -1,7 +1,11 @@
-from Classes import BoardSpace
+from Classes.BoardSpace import BoardSpace
 
 #using inheratince technique with BoardSpace
 class Chance_Space(BoardSpace):
+    
+    def __init__(self, position, name):
+    
+        super().__init__(position, name, "chance", 0)
     #method overriding-polymorphism
     def land_on(self, player):
         """

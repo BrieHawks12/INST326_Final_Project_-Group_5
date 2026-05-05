@@ -81,7 +81,7 @@ class Player:
         Return: None
         Author: Zhang
         """
-        self.balance -= amount
+        self._balance -= amount
     
     def gain_money(self, amount):
         """
@@ -90,20 +90,34 @@ class Player:
         Return: None
         Author: Zhang
         """
-        self.balance += amount
+        self._balance += amount
         
-    def buy_property(self, property):
+    #def buy_property(self, property):
         """Check if the player's balance can afford the property,
         if so, add property to the player's properties and deduct price money;
         Arg: property(obj) - Property obj not yet created
         Return: True if affordable, False otherwise
         Author: Zhang"""
-        if self.balance >= property.price:
-            self.balance = self.balance - property.price
-            self.properties.append(property)
-            return True
-        else:
+        #if self._balance >= property.price:
+         #   self._balance = self._balance - property.price
+          #  self.properties.append(property)
+           # return True
+        #else:
+         #   return False
+         
+    def buy_property(self, property_space):
+        if property_space.is_owned():
+            print(f"{property_space.name} is already owned.")
             return False
+        if self._balance < property_space.price:
+            print(f"{self.name} does not have enough money to buy {property_space.name}.")
+            return False
+        self._balance -= property_space.price
+        property_space.owner = self
+        self.properties.append(property_space)
+        print(f"{self.name} bought {property_space.name} for ${property_space.price}.")
+        return True
+
             
     def move(self, steps, board):
         """Move the player piece's position on the board
@@ -111,10 +125,12 @@ class Player:
         Return: None
         Author: Zhang, Bristow(provided little updates)"""
         old_position = self._position
-        new_position = self.position = board.move_position(self.position, steps)
+        #new_position = self.position = board.move_position(self.position, steps)
+        new_position = board.move_position(self._position, steps)
+        self._position = new_position
         
         if old_position + steps >= board.board_size():
-            self.receive(200)
+            self.gain_money(200)
             print(f"{self.name} passed GO and collected $200!")
             
         self._position = new_position
@@ -170,5 +186,5 @@ class Player:
         Author: Bristow
              
         """
-        return f"{self.name} | Position: {self.position} | Money: ${self.balance} | In Jail: {self.in_jail}"   
+        return f"{self.name} | Position: {self.position} | Money: ${self._balance} | In Jail: {self.in_jail}"   
     

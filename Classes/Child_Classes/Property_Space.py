@@ -1,6 +1,6 @@
-from OwnableSpace import OwnableSpace
-class PropertySpace(OwnableSpace):
-    def __init__(self, position, name, color, price, base_rent):
+from Classes.OwnableSpace import OwnableSpace
+class Property_Space(OwnableSpace):
+    def __init__(self, position, name, price, base_rent):
         """
         Creates the PropertySpace class
         
@@ -19,12 +19,12 @@ class PropertySpace(OwnableSpace):
         """
         
         super().__init__(position, name, "property", price)
-        self._color = color
+        #self._color = color
         self._base_rent = base_rent
         self._houses = 0
         
-    @property
-    def color(self):
+    #@property
+    #def color(self):
         """
         Returns the color of the property
         
@@ -37,7 +37,7 @@ class PropertySpace(OwnableSpace):
         Author: Bristow
         """
         
-        return self._color
+     #   return self._color
 
     @property
     def base_rent(self):
@@ -138,7 +138,7 @@ class PropertySpace(OwnableSpace):
             owner_name = "None"
         return (
             f"{self.position}: {self.name} [Property] | "
-            f"Color: {self.color} | Price: ${self.price} | "
+            f"Price: ${self.price} | "
             f"Rent: ${self.calculate_rent()} | Owner: {owner_name}"
 
         )

@@ -1,5 +1,13 @@
 #from filename import classname     
-from BoardSpace import BoardSpace
+#from BoardSpace import BoardSpace
+from Classes.Child_Classes.Go_Space import Go_Space
+from Classes.Child_Classes.Property_Space import Property_Space
+from Classes.Child_Classes.Community_Chest_Space import Community_Chest
+from Classes.Child_Classes.Tax_Space import Tax_Space
+from Classes.Child_Classes.Chance_Space import Chance_Space
+from Classes.Child_Classes.Just_Visiting_Space import Just_Visiting_Space
+from Classes.Child_Classes.Free_Parking_Space import Free_Parking_Space
+from Classes.Child_Classes.Go_To_Jail import Go_To_Jail_Space
        
 class Board:
     def __init__(self):
@@ -14,10 +22,16 @@ class Board:
         
         Authors: Briana Bristow
         """
-        self.spaces = self.create_board()
+        self._spaces = self._create_board()
+        
+    @property
+    def spaces(self):
+        return self._spaces
+        
+    
      
     #Creates Monopoly Board in order    
-    def create_board(self):
+    def _create_board(self):
         """
         Creates the Monopoly board as list
         
@@ -30,52 +44,50 @@ class Board:
         Authors: Bristow, Zhang, Abzun
         """
         
-        return[
-            BoardSpace( 0, "Go", "go", 200),
-            BoardSpace(1, "Adele H. Stamp Student Union", "property", 60),
-            BoardSpace(2, "Community Chest", "community_chest", 0),
-            BoardSpace(3,  "H.J. Patterson Hall", "property", 60),
-            BoardSpace(4, "Income Tax",  "tax", 0),
-            BoardSpace(5, "Reading Railroad",  "railroad", 200),#purple line??
-            BoardSpace(6, "McKeldin Library", "property", 100),
-            BoardSpace(7, "Chance",  "chance",0),
-            BoardSpace(8, "Edward St. John Learning & Teaching Center","property",100),
-            BoardSpace(9, "Microbiology Building ",  "property",  120),
-            
-            BoardSpace(10, "Jail / Just Visiting", "jail", 50),
-            BoardSpace(11,  "Hornbake Library", "property", 140),
-            BoardSpace(12, "Electric Company", "utility", 140),
-            BoardSpace(13,  "Stem Library",  "property",  140),
-            BoardSpace(14,  "Brendon Iribe Building",  "property",  160),
-            BoardSpace(15,  "Pennsylvania Railroad", "railroad",200),
-            BoardSpace(16, "Skinner Building", "property", 180),
-            BoardSpace(17, "Community Chest", "community_chest", 0),
-            BoardSpace(18, "A James Clark", "property", 180),
-            BoardSpace(19, "Glenn L. Martin Hall", "property", 200),
-            
-            BoardSpace(20, "Free Parking", "free_parking", 0),
-            BoardSpace(21, "Plants and Science", "property", 220),
-            BoardSpace(22, "Chance", "chance", 0),
-            BoardSpace(23, "Cole Activities Building", "property", 220),
-            BoardSpace(24, "Jule Hall", "property", 240),
-            BoardSpace(25, "B. & O. Railroad", "railroad", 200),
-            BoardSpace(26, "Martin Hall", "property", 260),
-            BoardSpace(27, "Symons Hall", "property", 260),
-            BoardSpace(28, "Water Works", "utility", 150),
+        return [
 
-            BoardSpace(29, "Xfinity Center", "property", 280),
-            BoardSpace(30, "Go To Jail", "go_to_jail", 0),
-            BoardSpace(31, "Tawes Hall", "property", 300),
-            BoardSpace(32, "Shoemaker Bldg", "property", 300),
-            BoardSpace(33, "Community Chest", "community_chest", 0),
-            BoardSpace(34, "Tydings Hall", "property", 320),
-            BoardSpace(35, "Shuttle-UM", "railroad", 200),
-            BoardSpace(36, "Chance", "chance", 0),
-            BoardSpace(37, "Park Lot 1", "property", 350),
-            BoardSpace(38, "Parking Citaion", "tax", 0),
-            BoardSpace(39, "Reckord Armory", "property", 400)
-                       
-        ]                  
+            Go_Space(0, "Go"),
+            Property_Space(1, "Adele H. Stamp Student Union", 60, 2),
+            Community_Chest(2, "Community Chest"),
+            Property_Space(3, "H.J. Patterson Hall", 60, 4),
+            Tax_Space(4, "Income Tax", 0),
+            #RailroadSpace(5, "Reading Railroad", 200),
+            Property_Space(6, "McKeldin Library", 100, 6),
+            Chance_Space(7, "Chance"),
+            Property_Space(8, "Edward St. John Learning & Teaching Center", 100, 6),
+            Property_Space(9, "Microbiology Building ", 120, 8),
+            Just_Visiting_Space(10, "Jail / Just Visiting"),
+            Property_Space(11, "Hornbake Library", 140, 10),
+            #UtilitySpace(12, "Electric Company", 140),
+            Property_Space(13, "Stem Library", 140, 10),
+            Property_Space(14, "Brendon Iribe Building", 160, 12),
+            #RailroadSpace(15, "Pennsylvania Railroad", 200),
+            Property_Space(16, "Skinner Building", 180, 14),
+            Community_Chest(17, "Community Chest"),
+            Property_Space(18, "A James Clark", 180, 14),
+            Property_Space(19, "Glenn L. Martin Hall", 200, 16),
+            Free_Parking_Space(20, "Free Parking"),
+            Property_Space(21, "Plants and Science", 220, 18),
+            Chance_Space(22, "Chance"),
+            Property_Space(23, "Cole Activities Building", 220, 18),
+            Property_Space(24, "Jule Hall", 240, 20),
+            #RailroadSpace(25, "B. & O. Railroad", 200),
+            Property_Space(26, "Martin Hall", 260, 22),
+            Property_Space(27, "Symons Hall", 260, 22),
+            #UtilitySpace(28, "Water Works", 150),
+            Property_Space(29, "Xfinity Center", 280, 24),
+            Go_To_Jail_Space(30, "Go To Jail"),
+            Property_Space(31, "Tawes Hall", 300, 26),
+            Property_Space(32, "Shoemaker Bldg", 300, 26),
+            Community_Chest(33, "Community Chest"),
+            Property_Space(34, "Tydings Hall", 320, 28),
+            #RailroadSpace(35, "Shuttle-UM", 200),
+            Chance_Space(36, "Chance"),
+            Property_Space(37, "Park Lot 1", 350, 35),
+            Tax_Space(38, "Parking Citaion", 0),
+            Property_Space(39, "Reckord Armory", 400, 50)
+
+        ]     
                         
            
           
@@ -83,14 +95,14 @@ class Board:
         
     def get_space(self, position):
         """
-        Returns the postion of the player at the given moment in the gameplay
+        Returns the position of the player at the given moment in the gameplay
         
         Args:
         self:instance of a class
-        postion:postion on a board
+        position:position on a board
         
         Returns:
-        list: postion on the board
+        list: position on the board
         
         Author: Bristow
         """
@@ -98,27 +110,30 @@ class Board:
         return self.spaces[position]
     
     
-    def move_postion(self, current_postion:int, steps:int)-> int:
+    def move_position(self, current_position:int, steps:int)-> int:
         """
         Calculates board position after moving steps
         Args: 
-            current_postion:player's current positon
+            current_position:player's current positon
             steps: numper of spaces forward
             
         Returns:
             int: new position space
         Author: Melanie Abzun
         """
-        new_postion = (current_postion + steps) % len(self.spaces)
-        return new_postion
+        new_position = (current_position + steps) % len(self.spaces)
+        return new_position
+    
+    def board_size(self):
+       return 40 
     
 #Below are used for testing purposes    
-b1 = Board()
-space = b1.get_space(35)
-print(space)
+#b1 = Board()
+#space = b1.get_space(35)
+#print(space)
 
-new_postion = b1.move_postion(38,5)
-print(new_postion)
+#new_position = b1.move_position(38,5)
+#print(new_position)
 
 
 

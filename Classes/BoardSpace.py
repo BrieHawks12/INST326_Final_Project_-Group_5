@@ -1,4 +1,4 @@
-from abc import abstractmethod 
+from abc import ABC,abstractmethod 
 
 class BoardSpace(ABC):
     def __init__(self, position, name, category, price=0):
@@ -19,9 +19,18 @@ class BoardSpace(ABC):
         #encapsolation technique being used by position and name
         self._position = position
         self._name = name
-        self.category = category
-        self.price = price
-        
+        self._category = category
+        self._price = price
+    
+    @property
+    def category(self):
+        return self._category
+
+    @property
+    def price(self):
+        return self._price
+    
+         
     @property    
     def position(self):
         """
@@ -87,6 +96,8 @@ class BoardSpace(ABC):
         """
         if self.category in ["property","railroad","utility"]:
             return True
+        else:
+            return False
     
     def __str__(self):
         """
@@ -100,5 +111,5 @@ class BoardSpace(ABC):
         
         Authors: Briana Bristow
         """
-        return f"{self.poistion}: {self.name} {self.category} - ${self.price}"
+        return f"{self.position}: {self.name} {self.category} - ${self.price}"
                
