@@ -8,6 +8,8 @@ from Classes.Child_Classes.Chance_Space import Chance_Space
 from Classes.Child_Classes.Just_Visiting_Space import Just_Visiting_Space
 from Classes.Child_Classes.Free_Parking_Space import Free_Parking_Space
 from Classes.Child_Classes.Go_To_Jail import Go_To_Jail_Space
+from Classes.Child_Classes.Railroad_Space import Railroad_Space
+from Classes.Child_Classes.Utility_Space import Utility_Space
        
 class Board:
     def __init__(self):
@@ -51,17 +53,17 @@ class Board:
             Community_Chest(2, "Community Chest"),
             Property_Space(3, "H.J. Patterson Hall", 60, 4),
             Tax_Space(4, "Income Tax", 0),
-            #RailroadSpace(5, "Reading Railroad", 200),
+            Railroad_Space(5, "Metro Green Line", 200),
             Property_Space(6, "McKeldin Library", 100, 6),
             Chance_Space(7, "Chance"),
             Property_Space(8, "Edward St. John Learning & Teaching Center", 100, 6),
             Property_Space(9, "Microbiology Building ", 120, 8),
             Just_Visiting_Space(10, "Jail / Just Visiting"),
             Property_Space(11, "Hornbake Library", 140, 10),
-            #UtilitySpace(12, "Electric Company", 140),
+            Utility_Space(12, "UMD Electricity", 140),
             Property_Space(13, "Stem Library", 140, 10),
             Property_Space(14, "Brendon Iribe Building", 160, 12),
-            #RailroadSpace(15, "Pennsylvania Railroad", 200),
+            Railroad_Space(15, "College Park Metro", 200),
             Property_Space(16, "Skinner Building", 180, 14),
             Community_Chest(17, "Community Chest"),
             Property_Space(18, "A James Clark", 180, 14),
@@ -71,17 +73,17 @@ class Board:
             Chance_Space(22, "Chance"),
             Property_Space(23, "Cole Activities Building", 220, 18),
             Property_Space(24, "Jule Hall", 240, 20),
-            #RailroadSpace(25, "B. & O. Railroad", 200),
+            Railroad_Space(25, "Purple Line", 200),
             Property_Space(26, "Martin Hall", 260, 22),
             Property_Space(27, "Symons Hall", 260, 22),
-            #UtilitySpace(28, "Water Works", 150),
+            Utility_Space(28, "UMD Water System", 150),
             Property_Space(29, "Xfinity Center", 280, 24),
             Go_To_Jail_Space(30, "Go To Jail"),
             Property_Space(31, "Tawes Hall", 300, 26),
             Property_Space(32, "Shoemaker Bldg", 300, 26),
             Community_Chest(33, "Community Chest"),
             Property_Space(34, "Tydings Hall", 320, 28),
-            #RailroadSpace(35, "Shuttle-UM", 200),
+            Railroad_Space(35, "Shuttle-UM", 200),
             Chance_Space(36, "Chance"),
             Property_Space(37, "Park Lot 1", 350, 35),
             Tax_Space(38, "Parking Citaion", 0),
