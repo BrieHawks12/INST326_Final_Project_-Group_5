@@ -23,5 +23,5 @@ class Community_Chest(BoardSpace):
 
         
         """
-        
-        print (f"{player.name} landed on Community Chest")
+        player.gain_money(100)
+        print (f"{player.name} landed on Community Chest and recieved $100")

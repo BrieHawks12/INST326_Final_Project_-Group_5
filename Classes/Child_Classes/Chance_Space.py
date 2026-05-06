@@ -22,4 +22,5 @@ class Chance_Space(BoardSpace):
         Author: Bristow
 
         """
-        print (f"{player.name} landed on chance")
+        player.gain_money(100)
+        print (f"{player.name} landed on chance and recieved $100")

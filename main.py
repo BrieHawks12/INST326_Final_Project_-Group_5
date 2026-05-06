@@ -7,6 +7,9 @@ board = Board()
 player = Player("Briana", "Turtle")
 dice = Dice()
 
+
+    
+
 roll = dice.roll_dice()
 print(f"Rolled: {roll}")
 
@@ -16,3 +19,12 @@ print(space)
 
 space.land_on(player)
 
+print(player)
+print("Owned properties:", [p.name for p in player.properties])
+try:
+    if space.owner:
+        space_owner_displayed = space.owner.name
+    else:
+        space_owner_displayed = "None" 
+except AttributeError:
+    space_owner_displayed = "None"

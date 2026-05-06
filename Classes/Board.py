@@ -52,7 +52,7 @@ class Board:
             Property_Space(1, "Adele H. Stamp Student Union", 60, 2),
             Community_Chest(2, "Community Chest"),
             Property_Space(3, "H.J. Patterson Hall", 60, 4),
-            Tax_Space(4, "Income Tax", 0),
+            Tax_Space(4, "Income Tax", 100),
             Railroad_Space(5, "Metro Green Line", 200),
             Property_Space(6, "McKeldin Library", 100, 6),
             Chance_Space(7, "Chance"),
@@ -86,7 +86,7 @@ class Board:
             Railroad_Space(35, "Shuttle-UM", 200),
             Chance_Space(36, "Chance"),
             Property_Space(37, "Park Lot 1", 350, 35),
-            Tax_Space(38, "Parking Citaion", 0),
+            Tax_Space(38, "Parking Citation", 100),
             Property_Space(39, "Reckord Armory", 400, 50)
 
         ]     
