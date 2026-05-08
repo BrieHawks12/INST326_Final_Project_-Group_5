@@ -7,9 +7,6 @@ board = Board()
 player = Player("Briana", "Turtle")
 dice = Dice()
 
-
-    
-
 roll = dice.roll_dice()
 print(f"Rolled: {roll}")
 

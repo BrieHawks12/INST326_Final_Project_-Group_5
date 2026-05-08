@@ -90,7 +90,9 @@ class BoardSpace(ABC):
         self: instance of the class
         
         Returns:
-            boolean: True or False        Authors: Briana Bristow
+            boolean: True or False        
+            
+        Authors: Briana Bristow
         """
         if self.category in ["property","railroad","utility"]:
             return True

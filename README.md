@@ -6,7 +6,10 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
 # Repository Description
 
-1) Classes Directory
+1) Main Class
+    - Main.py class runs the core of the game by using the other classes. 
+
+2) Classes Directory
     - Board.py: It imports BoardSpace Class. Board class creates the structure of the Monopoly game board. It contains BoardSpace, methods to move around the board, get the name of the space.
 
     - BoardSpace.py: This is responsible to determine the price category, and postion number of any particular space on the board. 
@@ -17,7 +20,7 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
     - OwnableSpace.py: This class determines the behavior that will happen when a player lands on a space. It determines if the space is available for purchase and the rent price.
 
-2) Child Classes Directory
+3) Child Classes Directory
     - Chance_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Chance Space. 
 
     - Community_Chest_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Community Chest Space. 
