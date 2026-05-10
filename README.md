@@ -60,9 +60,10 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
 # Attribution Table
 
-Method/Function | Primary Author | Technique Claimed
-calculate_rent  | Briana Bristow | Abstraction
-super().__init__| Briana Bristow | Inheritance
+|Method/Function | Primary Author | Technique Claimed|
+|:---            |:---            |:---|
+|calculate_rent  | Briana Bristow | Abstraction|
+|super().__init__| Briana Bristow | Inheritance|
 
 
 ‌
