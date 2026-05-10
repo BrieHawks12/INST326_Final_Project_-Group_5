@@ -23,22 +23,7 @@ class Property_Space(OwnableSpace):
         self._base_rent = base_rent
         self._houses = 0
         
-    #@property
-    #def color(self):
-        """
-        Returns the color of the property
-        
-        Args:
-        self: instance of the class
-        
-        Returns:
-        String of color of the space
-        
-        Author: Bristow
-        """
-        
-     #   return self._color
-
+    
     @property
     def base_rent(self):
         """

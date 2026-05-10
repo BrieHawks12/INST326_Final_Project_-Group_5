@@ -91,10 +91,7 @@ class Board:
 
         ]     
                         
-           
-          
-           
-        
+                   
     def get_space(self, position):
         """
         Returns the position of the player at the given moment in the gameplay
@@ -129,13 +126,6 @@ class Board:
     def board_size(self):
        return 40 
     
-#Below are used for testing purposes    
-#b1 = Board()
-#space = b1.get_space(35)
-#print(space)
-
-#new_position = b1.move_position(38,5)
-#print(new_position)
 
 
 

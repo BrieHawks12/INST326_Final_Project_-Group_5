@@ -49,9 +49,7 @@ class BoardSpace(ABC):
         Bristow
         
         """
-        
-        
-        
+
         return self._price
     
          
