@@ -24,10 +24,34 @@ class BoardSpace(ABC):
     
     @property
     def category(self):
+        """
+        determins the category of the spaces
+        
+        Args:
+        self: instance of the class
+        
+        Author:
+        Bristow
+        """
+        
         return self._category
 
     @property
     def price(self):
+        
+        """
+        Returns the price of the space
+        
+        Args:
+        self: instance of the class
+        
+        Author:
+        Bristow
+        
+        """
+        
+        
+        
         return self._price
     
          
