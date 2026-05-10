@@ -106,17 +106,33 @@ class OwnableSpace(BoardSpace, ABC):
         returns:
         prints string about the summary of the specific space
         
-        Author: Bristow
+        Author: Bristow, Zhang
         
         """
 
         if not self.is_owned():
             print(f"{player.name} landed on {self.name}, which is unowned.")
-            player.buy_property(self)
+            
+            buy_choice = input(f"Do you want to buy {self.name} for ${self.price}? (yes/no): ")
+            if buy_choice.lower() == "yes":
+                player.buy_property(self)
+            else:
+                print(f"{player.name} chose not to buy {self.name}.")
 
         elif self.owner == player:
             print(f"{player.name} landed on their own property: {self.name}.")
+            if self.category == "property":
+                print(f"Current houses: {self.houses}")
+                house_choice = input("Do you want to buy a house for $50? (yes/no): ")
+                
+                if house_choice.lower() == "yes":
+                    if player.balance >= 50:
+                        if self.add_house():
+                            player.pay_money(50)
+                            print(f"{player.name} bought a house on {self.name}.")
 
+                    else:
+                        print("Not enough money to buy a house.")
         else:
             rent = self.calculate_rent()
             print(f"{player.name} landed on {self.name}, owned by {self.owner.name}.")
