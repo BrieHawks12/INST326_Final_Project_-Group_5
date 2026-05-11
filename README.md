@@ -19,6 +19,8 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
     - Dice.py: This class is simulates rolling a six sided dice and sums value. The sum will determine how many board spaces the player will move.
 
     - OwnableSpace.py: This class determines the behavior that will happen when a player lands on a space. It determines if the space is available for purchase and the rent price.
+    
+    - CPUPlayer.py: This class respresents the CPU player that makes automated decisions every round of the game without user input.
 
 3) Child Classes Directory
     - Chance_Space.py: This child class uses polymorphism to determine what will happen when a user lands on the Chance Space. 
