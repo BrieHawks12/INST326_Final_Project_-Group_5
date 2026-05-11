@@ -46,10 +46,10 @@ class SetupPlayer:
         player4_cpu = CPUPlayer("Player 4", remaining_pieces[2])
         
         print("===== Players =====")
-        print(f"{player1.name}: {player1.token}")
-        print(f"{player2_cpu.name}: {player2_cpu.token}")
-        print(f"{player3_cpu.name}: {player3_cpu.token}")
-        print(f"{player4_cpu.name}: {player4_cpu.token}")
+        print(f"{player1.name}: {player1.piece}")
+        print(f"{player2_cpu.name}: {player2_cpu.piece}")
+        print(f"{player3_cpu.name}: {player3_cpu.piece}")
+        print(f"{player4_cpu.name}: {player4_cpu.piece}")
         return[player1,player2_cpu,player3_cpu, player4_cpu]
         
         

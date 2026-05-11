@@ -12,11 +12,13 @@ board = Board()
 dice = Dice()
 setup= SetupPlayer()
 players = setup.setup()
+round_number = 1
 
 while True:
+    print(f"\n===== Round {round_number} =====")
     
     for player in players:
-        print(f"{player.name}'s turn")
+        print(f"\n ========== \n {player.name}'s turn \n ==========")
         if not player.is_cpu:
             input("Press Enter to roll dice: ")
         else:
@@ -35,7 +37,7 @@ while True:
         #space.land_on(player)
 
         if not player.is_cpu:
-            check_status = input("Do you want to check your status? (yes/no): ")
+            check_status = input("\n Do you want to check your status? (yes/no): ")
             if check_status.lower() == "yes":
                 print("\n===== PLAYER STATUS =====")
 
@@ -60,3 +62,4 @@ while True:
                 space_owner_displayed = "None" 
         except AttributeError:
             space_owner_displayed = "None"
+    round_number += 1
