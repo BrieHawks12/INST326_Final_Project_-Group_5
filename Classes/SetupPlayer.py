@@ -16,7 +16,9 @@ class SetupPlayer:
     }
     def setup(self):
         """
-        Asks player for name and to choice a token piece. CPU players are then created.
+        Creates player 1(user) and 3 cpu players.
+        Asks player 1 for name and to choice a token piece. 
+        CPU players are then created and will automatically get remaining pieces.
         Returns: 
             list: All 4 players in the game
         Author: Melanie Abzun
