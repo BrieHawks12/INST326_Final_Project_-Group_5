@@ -30,4 +30,16 @@ class SetupPlayer:
         choice = input("Enter the number of the piece: ").strip()
         while choice not in self.token_piece:
             choice= input("Invalid response. Choose from the numbers displayed: ")
-        player1= Player(name, self.token_piece[choice])   
+        
+        player1_token = Player(name, self.token_piece[choice])   
+        player1= Player(name,player1_token)
+        
+        remaining_pieces=[]
+        for number, token in self.token_piece.items():
+            if token != player1_token:
+                remaining_pieces.append(token)
+        
+        player2_cpu = CPUPlayer("Player 2", remaining_pieces[0])
+        player3_cpu = CPUPlayer("Player 3", remaining_pieces[1])
+        player4_cpu = CPUPlayer("Player 4", remaining_pieces[2])
+        
