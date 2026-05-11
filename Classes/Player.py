@@ -100,20 +100,20 @@ class Player:
         """
         self._balance += amount
         
-    #def buy_property(self, property):
-        """Check if the player's balance can afford the property,
-        if so, add property to the player's properties and deduct price money;
-        Arg: property(obj) - Property obj not yet created
-        Return: True if affordable, False otherwise
-        Author: Zhang"""
-        #if self._balance >= property.price:
-         #   self._balance = self._balance - property.price
-          #  self.properties.append(property)
-           # return True
-        #else:
-         #   return False
+  
+        
          
     def buy_property(self, property_space):
+        """Check if the player's balance can afford the property,
+        if so, add property to the player's properties and deduct price money;
+        
+        Arg: property(obj) - Property obj not yet created
+        
+        Return: True if affordable, False otherwise
+        
+        Author: Zhang
+        Author: Bristow (Small edits)
+        """
         if property_space.is_owned():
             print(f"{property_space.name} is already owned.")
             return False
