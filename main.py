@@ -8,8 +8,6 @@ from Classes.SetupPlayer import SetupPlayer
 Main Monopoly loop and display: rolls dice, players take turns, and returns space interactions.
 Authors: Melanie Abzun, Briana Bristow, Siddhi Patel, Jiayang Zhang
 """
-
-
 board = Board()
 dice = Dice()
 setup= SetupPlayer()
@@ -36,7 +34,6 @@ while True:
         #print("\nTesting landing on same property again...\n")
         #space.land_on(player)
 
-        
         if not player.is_cpu:
             check_status = input("Do you want to check your status? (yes/no): ")
             if check_status.lower() == "yes":

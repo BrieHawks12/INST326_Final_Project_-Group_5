@@ -7,7 +7,7 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 # Repository Description
 
 1) Main Class
-    - Main.py class runs the core of the game by using the other classes. 
+    - Main.py class runs the core gameplay loop by using the other classes. It handles player turns, dice rolling, movement, property interaction, and player status checking.
 
 2) Classes Directory
     - Board.py: It imports BoardSpace Class. Board class creates the structure of the Monopoly game board. It contains BoardSpace, methods to move around the board, get the name of the space.
@@ -18,7 +18,7 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
     - Dice.py: This class is simulates rolling a six sided dice and sums value. The sum will determine how many board spaces the player will move.
 
-    - OwnableSpace.py: This class determines the behavior that will happen when a player lands on a space. It determines if the space is available for purchase and the rent price.
+    - OwnableSpace.py: This class determines the behavior that happens when a player lands on an ownable space. It handles property purchases, rent payments, and house purchase interactions for owned properties.
     
     - CPUPlayer.py: This class respresents the CPU player that makes automated decisions every round of the game without user input.
 
