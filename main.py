@@ -36,6 +36,16 @@ while True:
         #print("\nTesting landing on same property again...\n")
         #space.land_on(player)
 
+        # win/lose conditions 
+        if player.balance <=0:
+            print(f"\n {player.name} is bankrupt and loses the game")
+        #to find the winner 
+        for p in players:
+            if p != player: 
+                print(f" {p.name} wins the game")
+
+        exit()
+
         if not player.is_cpu:
             check_status = input("\n Do you want to check your status? (yes/no): ")
             if check_status.lower() == "yes":
