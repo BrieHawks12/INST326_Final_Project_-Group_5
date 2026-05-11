@@ -60,11 +60,15 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 - Siddhi Patel
 
 
+# How to Play the Game:
+- Run the code while in the main.py class and follow the prompts!!
+
+
 # Attribution Table
 
 |Method/Function | Primary Author | Technique Claimed|
 |:---            |:---            |:---|
-|calculate_rent  | Briana Bristow | Abstraction|
+|land_on | Briana Bristow | f strings with expressions|
 |super().__init__| Briana Bristow | Inheritance|
 
 
