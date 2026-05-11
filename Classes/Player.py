@@ -73,6 +73,14 @@ class Player:
         Author: Bristow
         """
         return self._in_jail
+    @property
+    def is_cpu(self):
+        """
+        Returns False since Player is human
+        Author: Melanie Abzun
+        """
+        return False
+        
         
     def pay_money(self, amount):
         """
