@@ -136,7 +136,7 @@ class OwnableSpace(BoardSpace, ABC):
                 
                 if player.is_cpu:
                     if player.balance >= 50 and player. decide_to_buy(self):
-                        if self.add_house():
+                        if self.add_house(player):
                             player.pay_money(50)
                             print(f"{player.name} bought a house on {self.name}.")
                     else: 
@@ -149,7 +149,7 @@ class OwnableSpace(BoardSpace, ABC):
                     
                     if house_choice.lower() == "yes":
                         if player.balance >= 50:
-                            if self.add_house():
+                            if self.add_house(player):
                                 player.pay_money(50)
                                 print(f"{player.name} bought a house on {self.name}.")
 
