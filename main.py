@@ -75,7 +75,7 @@ while round_number <= Max_Rounds:
             space_owner_displayed = "None"
     round_number += 1
 
-    print("n\====== Game Over (Max amount of rounds reached)======")
+    print("n\===== Game Over (Max amount of rounds reached)=====")
     winner = max(players, key=lambda p: p.balance)
     print(f" winner with most money: {winner.name} with ${winner.balance}")
     break 
