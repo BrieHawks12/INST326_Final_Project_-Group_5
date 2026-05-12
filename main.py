@@ -15,7 +15,7 @@ players = setup.setup()
 round_number = 1
 Max_Rounds = 20
 
-while True:
+while round_number <= Max_Rounds: 
     print(f"\n===== Round {round_number} =====")
     
     for player in players:
