@@ -122,7 +122,7 @@ class OwnableSpace(BoardSpace, ABC):
                     
                     
             else:
-                buy_choice = input(f"Do you want to buy {self.name} for ${self.price}? (yes/no): ").stip().lower()
+                buy_choice = input(f"Do you want to buy {self.name} for ${self.price}? (yes/no): ").strip().lower()
                 if buy_choice.lower() == "yes":
                     player.buy_property(self)
                 else:
@@ -136,21 +136,25 @@ class OwnableSpace(BoardSpace, ABC):
                 
                 if player.is_cpu:
                     if player.balance >= 50 and player. decide_to_buy(self):
-                        pass
-                        
-                        
-                
-                
-                house_choice = input("Do you want to buy a house for $50? (yes/no): ")
-                
-                if house_choice.lower() == "yes":
-                    if player.balance >= 50:
                         if self.add_house():
                             player.pay_money(50)
                             print(f"{player.name} bought a house on {self.name}.")
+                    else: 
+                        print(f"{player.name} decided to but a house.")
+                        
+                else:    
+                
+                
+                    house_choice = input("Do you want to buy a house for $50? (yes/no): ")
+                    
+                    if house_choice.lower() == "yes":
+                        if player.balance >= 50:
+                            if self.add_house():
+                                player.pay_money(50)
+                                print(f"{player.name} bought a house on {self.name}.")
 
-                    else:
-                        print("Not enough money to buy a house.")
+                        else:
+                            print("Not enough money to buy a house.")
 
         else:
             rent = self.calculate_rent()
