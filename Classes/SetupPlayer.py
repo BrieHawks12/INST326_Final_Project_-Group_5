@@ -36,10 +36,13 @@ class SetupPlayer:
         player1_token = self.token_piece[choice]
         player1= Player(name,player1_token)
         
-        remaining_pieces=[]
-        for number, token in self.token_piece.items():
-            if token != player1_token:
-                remaining_pieces.append(token)
+        remaining_pieces=[
+            token
+            for number, token in self.token_piece.items()
+            if token != player1_token
+        ]
+       
+                
         
         player2_cpu = CPUPlayer("Player 2", remaining_pieces[0])
         player3_cpu = CPUPlayer("Player 3", remaining_pieces[1])
