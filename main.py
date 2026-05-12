@@ -13,7 +13,7 @@ dice = Dice()
 setup= SetupPlayer()
 players = setup.setup()
 round_number = 1
-Max_Rounds = 5
+Max_Rounds = 10
 
 while round_number <= Max_Rounds: 
     print(f"\n===== Round {round_number} =====")
