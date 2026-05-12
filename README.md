@@ -74,6 +74,8 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 |:---            |:---            |:---|
 |land_on | Briana Bristow | f strings with expressions|
 |super().__init__| Briana Bristow | Inheritance|
+|Player.move() | Jiayang Zhang | composition of two custom classes|
+|Railroad_Space.__str__() | Jiayang Zhang | magic methods other than __init__()|
 
 
 ‌
