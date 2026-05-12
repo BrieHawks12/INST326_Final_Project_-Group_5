@@ -74,6 +74,41 @@ class Property_Space(OwnableSpace):
         print(f"{self.name} already has 4 houses. Max capacity")
         return False
     
+    def add_house(self,player):
+        
+        """
+        Allows a user to add houses to a property
+        
+        Args:
+        self: instance of the class
+        
+        Returns:
+        Boolean True or False
+        
+        Author: Bristow, Zhang
+        """
+        house_cost = 50
+
+        if self._houses >= 4:
+
+            print(f"{self.name} already has 4 houses. Max capacity reached.")
+
+            return False
+
+        if player.balance < house_cost:
+
+            print(f"{player.name} does not have enough money to add a house to {self.name}.")
+
+            return False
+
+        player.pay_money(house_cost)
+
+        self._houses += 1
+
+        print(f"{player.name} paid ${house_cost} and added a house to {self.name}. Total houses: {self._houses}")
+
+        return True
+    
     def calculate_rent(self):
         """
         Calculates the rent of the space dependent on the number of houses

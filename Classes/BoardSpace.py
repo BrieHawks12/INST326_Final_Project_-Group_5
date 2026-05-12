@@ -86,6 +86,10 @@ class BoardSpace(ABC):
         """
         return self._name
     
+    @property
+    def category(self):
+        return self._category
+    
     @abstractmethod
     def land_on(self, player):
         """

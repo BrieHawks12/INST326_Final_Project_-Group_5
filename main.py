@@ -41,11 +41,11 @@ while round_number <= Max_Rounds:
         if player.balance <=0:
             print(f"\n {player.name} is bankrupt and loses the game")
         #to find the winner 
-        for p in players:
-            if p != player: 
-                print(f" {p.name} wins the game")
+            for p in players:
+                if p != player: 
+                    print(f" {p.name} wins the game")
 
-        exit()
+            exit()
 
         if not player.is_cpu:
             check_status = input("\n Do you want to check your status? (yes/no): ")
@@ -74,7 +74,9 @@ while round_number <= Max_Rounds:
         except AttributeError:
             space_owner_displayed = "None"
     round_number += 1
-    #max round with win condition
-    print("\nGame Over (Max amount of rounds reached)")
-    winner = max(players, key=lambda player: player.balance)
-    print(f"winner with most money: {winner.name} with ${winner.balance}") 
+    if round_number > Max_Rounds:
+        break
+#max round with win condition
+print("\nGame Over (Max amount of rounds reached)")
+winner = max(players, key=lambda player: player.balance)
+print(f"winner with most money: {winner.name} with ${winner.balance}") 

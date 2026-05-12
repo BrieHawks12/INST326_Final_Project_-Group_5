@@ -62,6 +62,7 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 
 # How to Play the Game:
 - Go to main.py class
+- Select the play button to run the code
 - Enter your players name
 - Choose between the list of tokens
 - Press Enter to roll the dice
