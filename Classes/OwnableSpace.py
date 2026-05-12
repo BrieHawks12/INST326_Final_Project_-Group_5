@@ -97,7 +97,7 @@ class OwnableSpace(BoardSpace, ABC):
     
     def land_on(self, player):
         """
-        Behavior when you land on a specific space. Uses Player Class
+        Behavior when you land on a specific space. Uses Player Class. Human player decides to buy(yes or no). CPU player decides randomly.
         
         Args:
         self: instance of the class
@@ -106,7 +106,7 @@ class OwnableSpace(BoardSpace, ABC):
         returns:
         prints string about the summary of the specific space
         
-        Author: Bristow, Zhang
+        Author: Bristow, Zhang, Abzun
         
         """
 

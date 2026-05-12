@@ -79,6 +79,7 @@ Our game will be a modified version of Monopoly. We will incorporate the basic r
 |Railroad_Space.__str__() | Jiayang Zhang | magic methods other than __init__()|
 |Wins/Lose Conditions() | Siddhi Patel | max game round ending |
 |SetupPlayer.setup()| Melanie Abzun | comprehensions |
+|SetupPlayer.setup()| Melanie Abzun | conditional expressions |
 
 
 ‌
