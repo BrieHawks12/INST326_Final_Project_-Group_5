@@ -112,18 +112,35 @@ class OwnableSpace(BoardSpace, ABC):
 
         if not self.is_owned():
             print(f"{player.name} landed on {self.name}, which is unowned.")
-             
-            buy_choice = input(f"Do you want to buy {self.name} for ${self.price}? (yes/no): ")
-            if buy_choice.lower() == "yes":
-                player.buy_property(self)
+            
+            if player.is_cpu:
+                if player.decide_to_buy(self):
+                    player.buy_property(self)
+                    print(f"{player.name} bought {self.name}.")
+                else:
+                    print(f"{player.name} did not buy {self.name}.")
+                    
+                    
             else:
-                print(f"{player.name} chose not to buy {self.name}.")
-            player.buy_property(self)
+                buy_choice = input(f"Do you want to buy {self.name} for ${self.price}? (yes/no): ").stip().lower()
+                if buy_choice.lower() == "yes":
+                    player.buy_property(self)
+                else:
+                    print(f"{player.name} chose not to buy {self.name}.")
+                
 
         elif self.owner == player:
             print(f"{player.name} landed on their own property: {self.name}.")
             if self.category == "property":
                 print(f"Current houses: {self.houses}")
+                
+                if player.is_cpu:
+                    if player.balance >= 50 and player. decide_to_buy(self):
+                        pass
+                        
+                        
+                
+                
                 house_choice = input("Do you want to buy a house for $50? (yes/no): ")
                 
                 if house_choice.lower() == "yes":
